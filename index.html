@@ -55,6 +55,7 @@
     "knowsAbout": ["PHP", "Symfony", "React", "TypeScript", "Node.js", "Leadership technique", "Fullstack Development", "Software Architecture"]
   }
   </script>
+  <script>(function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}})()</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -82,14 +83,75 @@
       --gray-50: #F8FAFC;
       --gray-100: #F1F5F9;
       --gray-900: #0F172A;
+
+      --color-bg-page: #F1F5F9;
+      --color-bg-card: #FFFFFF;
+      --color-card-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+      --color-text-primary: #0F172A;
+      --color-text-secondary: #475569;
+      --color-text-tertiary: #64748B;
+      --color-accent: #2563EB;
+      --color-accent-light: #3B82F6;
+      --color-sidebar-bg: #1E293B;
+      --color-sidebar-text: #CBD5E1;
+      --color-sidebar-title: #FFFFFF;
+      --color-sidebar-accent: #3B82F6;
+      --color-sidebar-link: #FFFFFF;
+      --color-pill-bg: #DBEAFE;
+      --color-pill-text: #2563EB;
+      --color-tag-bg: #334155;
+      --color-tag-text: #CBD5E1;
+      --color-tech-label: #334155;
+      --color-date: #94A3B8;
+      --color-bullet: #94A3B8;
+      --color-timeline-line: #E2E8F0;
+      --color-timeline-dot-border: #FFFFFF;
+      --color-cert-border: #F1F5F9;
+      --color-toggle-border: rgba(0,0,0,0.1);
+      --color-toggle-text: #0F172A;
+    }
+
+    html[data-theme="dark"] {
+      --color-bg-page: #0B1120;
+      --color-bg-card: #1A2332;
+      --color-card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 8px 32px rgba(0,0,0,0.2);
+      --color-text-primary: #E2E8F0;
+      --color-text-secondary: #B4C2D0;
+      --color-text-tertiary: #94A3B8;
+      --color-accent: #3B82F6;
+      --color-accent-light: #60A5FA;
+      --color-sidebar-bg: #111827;
+      --color-sidebar-text: #CBD5E1;
+      --color-sidebar-title: #E2E8F0;
+      --color-sidebar-accent: #60A5FA;
+      --color-sidebar-link: #E2E8F0;
+      --color-pill-bg: rgba(59,130,246,0.15);
+      --color-pill-text: #60A5FA;
+      --color-tag-bg: #1E293B;
+      --color-tag-text: #B4C2D0;
+      --color-tech-label: #B4C2D0;
+      --color-date: #94A3B8;
+      --color-bullet: #7C8CA0;
+      --color-timeline-line: #2D3748;
+      --color-timeline-dot-border: #1A2332;
+      --color-cert-border: #1E293B;
+      --color-toggle-border: rgba(255,255,255,0.1);
+      --color-toggle-text: #E2E8F0;
+    }
+
+    html.theme-transition,
+    html.theme-transition *,
+    html.theme-transition *::before,
+    html.theme-transition *::after {
+      transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
     }
 
     html { font-size: 16px; scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: var(--gray-900);
-      background: var(--gray-100);
+      color: var(--color-text-primary);
+      background: var(--color-bg-page);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
@@ -99,8 +161,8 @@
       margin: 2rem auto;
       display: grid;
       grid-template-columns: 1fr 340px;
-      background: var(--white);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+      background: var(--color-bg-card);
+      box-shadow: var(--color-card-shadow);
       border-radius: 8px;
       overflow: hidden;
     }
@@ -112,8 +174,8 @@
 
     /* ── Sidebar ── */
     .sidebar {
-      background: var(--slate-900);
-      color: var(--slate-300);
+      background: var(--color-sidebar-bg);
+      color: var(--color-sidebar-text);
       padding: 3rem 2rem 2.5rem;
     }
 
@@ -123,7 +185,7 @@
     .header h1 {
       font-size: 2.5rem;
       font-weight: 700;
-      color: var(--gray-900);
+      color: var(--color-text-primary);
       line-height: 1.15;
       letter-spacing: -0.02em;
     }
@@ -131,14 +193,14 @@
     .header .subtitle {
       font-size: 1.1rem;
       font-weight: 500;
-      color: var(--blue-600);
+      color: var(--color-accent);
       margin-top: 0.35rem;
     }
 
     .header .summary {
       margin-top: 1.25rem;
       font-size: 0.9rem;
-      color: #475569;
+      color: var(--color-text-secondary);
       line-height: 1.7;
     }
 
@@ -146,18 +208,18 @@
     .section-title {
       font-size: 1.25rem;
       font-weight: 700;
-      color: var(--gray-900);
+      color: var(--color-text-primary);
       text-transform: uppercase;
       letter-spacing: 0.06em;
       padding-bottom: 0.5rem;
-      border-bottom: 3px solid var(--blue-600);
+      border-bottom: 3px solid var(--color-accent);
       margin-bottom: 1.5rem;
       margin-top: 2.25rem;
     }
 
     .sidebar .section-title {
-      color: var(--white);
-      border-bottom-color: var(--blue-500);
+      color: var(--color-sidebar-title);
+      border-bottom-color: var(--color-sidebar-accent);
       margin-top: 2.25rem;
     }
 
@@ -173,7 +235,7 @@
       top: 8px;
       bottom: 0;
       width: 2px;
-      background: var(--slate-200);
+      background: var(--color-timeline-line);
     }
 
     .timeline-entry {
@@ -192,8 +254,8 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: var(--blue-600);
-      border: 2px solid var(--white);
+      background: var(--color-accent);
+      border: 2px solid var(--color-timeline-dot-border);
       z-index: 1;
     }
 
@@ -209,12 +271,12 @@
     .entry-title {
       font-size: 1.05rem;
       font-weight: 600;
-      color: var(--gray-900);
+      color: var(--color-text-primary);
     }
 
     .entry-date {
       font-size: 0.82rem;
-      color: var(--slate-400);
+      color: var(--color-date);
       font-weight: 500;
       white-space: nowrap;
     }
@@ -222,19 +284,19 @@
     .entry-company {
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--blue-600);
+      color: var(--color-accent);
     }
 
     .entry-location {
       font-size: 0.82rem;
-      color: #64748B;
+      color: var(--color-text-tertiary);
       margin-bottom: 0.5rem;
     }
 
     .entry-details {
       list-style: none;
       font-size: 0.85rem;
-      color: #475569;
+      color: var(--color-text-secondary);
     }
 
     .entry-details li {
@@ -252,7 +314,7 @@
       width: 4px;
       height: 4px;
       border-radius: 50%;
-      background: var(--slate-400);
+      background: var(--color-bullet);
     }
 
     /* ── Tech pills ── */
@@ -266,7 +328,7 @@
     .tech-stack .label {
       font-size: 0.78rem;
       font-weight: 600;
-      color: var(--slate-700);
+      color: var(--color-tech-label);
       margin-right: 0.25rem;
       line-height: 1.75rem;
     }
@@ -274,8 +336,8 @@
     .pill {
       display: inline-block;
       padding: 0.15rem 0.6rem;
-      background: var(--blue-100);
-      color: var(--blue-600);
+      background: var(--color-pill-bg);
+      color: var(--color-pill-text);
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 500;
@@ -300,12 +362,12 @@
     .edu-title {
       font-size: 1rem;
       font-weight: 600;
-      color: var(--gray-900);
+      color: var(--color-text-primary);
     }
 
     .edu-date {
       font-size: 0.82rem;
-      color: var(--slate-400);
+      color: var(--color-date);
       font-weight: 500;
       white-space: nowrap;
     }
@@ -313,17 +375,17 @@
     .edu-school {
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--blue-600);
+      color: var(--color-accent);
     }
 
     .edu-field {
       font-size: 0.85rem;
-      color: #64748B;
+      color: var(--color-text-tertiary);
     }
 
     .edu-desc {
       font-size: 0.83rem;
-      color: #475569;
+      color: var(--color-text-secondary);
       margin-top: 0.3rem;
       line-height: 1.55;
     }
@@ -331,7 +393,7 @@
     .edu-mention {
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--blue-600);
+      color: var(--color-accent);
     }
 
     /* ── Certifications ── */
@@ -342,7 +404,7 @@
       justify-content: space-between;
       align-items: baseline;
       padding: 0.6rem 0;
-      border-bottom: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--color-cert-border);
       gap: 1rem;
     }
 
@@ -351,20 +413,33 @@
     .cert-name {
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--gray-900);
+      color: var(--color-text-primary);
     }
 
     .cert-meta {
       font-size: 0.8rem;
-      color: var(--slate-400);
+      color: var(--color-date);
       white-space: nowrap;
     }
 
     /* ── References ── */
     .references-text {
       font-size: 0.9rem;
-      color: #64748B;
+      color: var(--color-text-tertiary);
       font-style: italic;
+    }
+
+    .references-text a {
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-decoration-color: var(--color-accent);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1.5px;
+    }
+
+    .references-text a:hover {
+      color: var(--color-accent-light);
+      text-decoration-color: var(--color-accent-light);
     }
 
     /* ── Sidebar: Contact ── */
@@ -384,17 +459,17 @@
     }
 
     .contact-item a {
-      color: var(--white);
+      color: var(--color-sidebar-link);
       text-decoration: underline;
-      text-decoration-color: var(--blue-500);
+      text-decoration-color: var(--color-sidebar-accent);
       text-underline-offset: 3px;
       text-decoration-thickness: 1.5px;
       transition: color 0.2s, text-decoration-color 0.2s;
     }
 
     .contact-item a:hover {
-      color: var(--blue-500);
-      text-decoration-color: var(--blue-500);
+      color: var(--color-sidebar-accent);
+      text-decoration-color: var(--color-sidebar-accent);
     }
 
     /* ── Sidebar: Skills ── */
@@ -404,7 +479,7 @@
     .skill-group-title {
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--color-sidebar-title);
       text-transform: uppercase;
       letter-spacing: 0.04em;
       margin-bottom: 0.4rem;
@@ -419,8 +494,8 @@
     .skill-tag {
       display: inline-block;
       padding: 0.15rem 0.55rem;
-      background: var(--slate-700);
-      color: var(--slate-300);
+      background: var(--color-tag-bg);
+      color: var(--color-tag-text);
       border-radius: 4px;
       font-size: 0.78rem;
       font-weight: 400;
@@ -434,12 +509,12 @@
     .lang-name {
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--white);
+      color: var(--color-sidebar-title);
     }
 
     .lang-level {
       font-size: 0.8rem;
-      color: var(--slate-400);
+      color: var(--color-date);
     }
 
     .dots {
@@ -452,10 +527,10 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: var(--slate-700);
+      background: var(--color-tag-bg);
     }
 
-    .dot.filled { background: var(--blue-500); }
+    .dot.filled { background: var(--color-accent-light); }
 
     /* ── Sidebar: Loisirs ── */
     .hobby-list {
@@ -467,11 +542,37 @@
 
     .hobby-tag {
       padding: 0.2rem 0.65rem;
-      background: var(--slate-700);
-      color: var(--slate-300);
+      background: var(--color-tag-bg);
+      color: var(--color-tag-text);
       border-radius: 4px;
       font-size: 0.82rem;
     }
+
+    /* ── Theme toggle ── */
+    .theme-toggle {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--color-toggle-border);
+      background: var(--color-bg-card);
+      color: var(--color-toggle-text);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+      z-index: 1000;
+    }
+
+    .theme-toggle:hover { transform: scale(1.1); }
+
+    .theme-toggle .icon-sun { display: none; }
+    html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 
     /* ── Fade-in animation ── */
     .fade-in {
@@ -487,7 +588,7 @@
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
-      body { background: var(--white); }
+      body { background: var(--color-bg-card); }
 
       .page {
         grid-template-columns: 1fr;
@@ -527,6 +628,32 @@
 
     /* ── Print ── */
     @media print {
+      html, html[data-theme="dark"] {
+        --color-bg-page: #FFFFFF;
+        --color-bg-card: #FFFFFF;
+        --color-card-shadow: none;
+        --color-text-primary: #0F172A;
+        --color-text-secondary: #475569;
+        --color-text-tertiary: #64748B;
+        --color-accent: #2563EB;
+        --color-accent-light: #3B82F6;
+        --color-sidebar-bg: #1E293B;
+        --color-sidebar-text: #CBD5E1;
+        --color-sidebar-title: #FFFFFF;
+        --color-sidebar-accent: #3B82F6;
+        --color-sidebar-link: #FFFFFF;
+        --color-pill-bg: #DBEAFE;
+        --color-pill-text: #2563EB;
+        --color-tag-bg: #334155;
+        --color-tag-text: #CBD5E1;
+        --color-tech-label: #334155;
+        --color-date: #94A3B8;
+        --color-bullet: #94A3B8;
+        --color-timeline-line: #E2E8F0;
+        --color-timeline-dot-border: #FFFFFF;
+        --color-cert-border: #F1F5F9;
+      }
+
       @page {
         size: A4;
         margin: 0;
@@ -572,6 +699,8 @@
       }
 
       .contact-item a[href]::after { display: none; }
+
+      .theme-toggle { display: none !important; }
     }
   </style>
 </head>
@@ -800,8 +929,8 @@
         </li>
       </ul>
 
-      <h2 class="section-title fade-in">Références</h2>
-      <p class="references-text fade-in">Références sur demande</p>
+      <h2 class="section-title fade-in">Contact</h2>
+      <p class="references-text fade-in">N'hésitez pas à me contacter sur <a href="https://linkedin.com/in/laouitielias" target="_blank" rel="noopener">LinkedIn</a>.</p>
 
     </main>
 
@@ -872,25 +1001,11 @@
       <div class="lang-item">
         <div class="lang-name">Français</div>
         <div class="lang-level">Natif</div>
-        <div class="dots">
-          <span class="dot filled"></span>
-          <span class="dot filled"></span>
-          <span class="dot filled"></span>
-          <span class="dot filled"></span>
-          <span class="dot filled"></span>
-        </div>
       </div>
 
       <div class="lang-item">
         <div class="lang-name">Anglais</div>
         <div class="lang-level">Autonomie professionnelle</div>
-        <div class="dots">
-          <span class="dot filled"></span>
-          <span class="dot filled"></span>
-          <span class="dot filled"></span>
-          <span class="dot filled"></span>
-          <span class="dot"></span>
-        </div>
       </div>
 
       <h2 class="section-title">Loisirs</h2>
@@ -902,6 +1017,11 @@
 
     </aside>
   </div>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Basculer le thème sombre">
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
 
   <script>
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -920,6 +1040,38 @@
     } else {
       document.querySelectorAll('.fade-in').forEach((el) => el.classList.add('visible'));
     }
+  </script>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var meta = document.querySelector('meta[name="theme-color"]');
+
+      function setTheme(theme, save) {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        if (meta) meta.setAttribute('content', theme === 'dark' ? '#0B1120' : '#1E293B');
+        if (save) localStorage.setItem('theme', theme);
+      }
+
+      toggle.addEventListener('click', function() {
+        document.documentElement.classList.add('theme-transition');
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        setTheme(isDark ? 'light' : 'dark', true);
+        setTimeout(function() {
+          document.documentElement.classList.remove('theme-transition');
+        }, 350);
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light', false);
+        }
+      });
+    })();
   </script>
 </body>
 </html>
