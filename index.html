@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elias Cédric Laouiti — Chef d'équipe technique & Développeur Fullstack sénior</title>
+  <meta name="description" content="CV d'Elias Cédric Laouiti — Chef d'équipe technique & Développeur Fullstack sénior avec plus de 15 ans d'expérience.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1E293B">
+  <link rel="canonical" href="https://laouiti.me/">
+  <meta property="og:title" content="Elias Cédric Laouiti — Chef d'équipe technique & Développeur Fullstack sénior">
+  <meta property="og:description" content="CV d'Elias Cédric Laouiti — Chef d'équipe technique & Développeur Fullstack sénior avec plus de 15 ans d'expérience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://laouiti.me/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Elias Cédric Laouiti",
+    "jobTitle": "Chef d'équipe technique & Développeur Fullstack sénior",
+    "url": "https://laouiti.me",
+    "sameAs": ["https://linkedin.com/in/laouitielias"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --slate-900: #1E293B;
+      --slate-800: #1E293B;
+      --slate-700: #334155;
+      --slate-400: #94A3B8;
+      --slate-300: #CBD5E1;
+      --slate-200: #E2E8F0;
+      --blue-600: #2563EB;
+      --blue-500: #3B82F6;
+      --blue-100: #DBEAFE;
+      --blue-50: #EFF6FF;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-900: #0F172A;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--gray-900);
+      background: var(--gray-100);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 1140px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      background: var(--white);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── Main column ── */
+    .main {
+      padding: 3rem 3rem 2.5rem;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      background: var(--slate-900);
+      color: var(--slate-300);
+      padding: 3rem 2rem 2.5rem;
+    }
+
+    /* ── Header / Name ── */
+    .header { margin-bottom: 2rem; }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .header .subtitle {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--blue-600);
+      margin-top: 0.35rem;
+    }
+
+    .header .summary {
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    /* ── Section headings ── */
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--blue-600);
+      margin-bottom: 1.5rem;
+      margin-top: 2.25rem;
+    }
+
+    .sidebar .section-title {
+      color: var(--white);
+      border-bottom-color: var(--blue-500);
+      margin-top: 2.25rem;
+    }
+
+    .sidebar .section-title:first-child { margin-top: 0; }
+
+    /* ── Timeline ── */
+    .timeline { position: relative; padding-left: 1.5rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 8px;
+      bottom: 0;
+      width: 2px;
+      background: var(--slate-200);
+    }
+
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-entry:last-child { margin-bottom: 0; }
+    .timeline-entry:last-child .timeline::before { display: none; }
+
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -1.5rem;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--blue-600);
+      border: 2px solid var(--white);
+      z-index: 1;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem 1rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .entry-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    .entry-date {
+      font-size: 0.82rem;
+      color: var(--slate-400);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .entry-company {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--blue-600);
+    }
+
+    .entry-location {
+      font-size: 0.82rem;
+      color: #64748B;
+      margin-bottom: 0.5rem;
+    }
+
+    .entry-details {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #475569;
+    }
+
+    .entry-details li {
+      padding-left: 0.9rem;
+      position: relative;
+      margin-bottom: 0.25rem;
+      line-height: 1.55;
+    }
+
+    .entry-details li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--slate-400);
+    }
+
+    /* ── Tech pills ── */
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.6rem;
+    }
+
+    .tech-stack .label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--slate-700);
+      margin-right: 0.25rem;
+      line-height: 1.75rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      background: var(--blue-100);
+      color: var(--blue-600);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    /* ── Education entries ── */
+    .edu-entry {
+      margin-bottom: 1.5rem;
+    }
+
+    .edu-entry:last-child { margin-bottom: 0; }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem 1rem;
+    }
+
+    .edu-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    .edu-date {
+      font-size: 0.82rem;
+      color: var(--slate-400);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .edu-school {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--blue-600);
+    }
+
+    .edu-field {
+      font-size: 0.85rem;
+      color: #64748B;
+    }
+
+    .edu-desc {
+      font-size: 0.83rem;
+      color: #475569;
+      margin-top: 0.3rem;
+      line-height: 1.55;
+    }
+
+    .edu-mention {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--blue-600);
+    }
+
+    /* ── Certifications ── */
+    .cert-list { list-style: none; }
+
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--gray-100);
+      gap: 1rem;
+    }
+
+    .cert-item:last-child { border-bottom: none; }
+
+    .cert-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--gray-900);
+    }
+
+    .cert-meta {
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      white-space: nowrap;
+    }
+
+    /* ── References ── */
+    .references-text {
+      font-size: 0.9rem;
+      color: #64748B;
+      font-style: italic;
+    }
+
+    /* ── Sidebar: Contact ── */
+    .contact-list { list-style: none; }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+    }
+
+    .contact-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .contact-item a {
+      color: var(--white);
+      text-decoration: underline;
+      text-decoration-color: var(--blue-500);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1.5px;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    .contact-item a:hover {
+      color: var(--blue-500);
+      text-decoration-color: var(--blue-500);
+    }
+
+    /* ── Sidebar: Skills ── */
+    .skill-group { margin-bottom: 1.25rem; }
+    .skill-group:last-child { margin-bottom: 0; }
+
+    .skill-group-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      background: var(--slate-700);
+      color: var(--slate-300);
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 400;
+    }
+
+    /* ── Sidebar: Languages ── */
+    .lang-item {
+      margin-bottom: 0.75rem;
+    }
+
+    .lang-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .lang-level {
+      font-size: 0.8rem;
+      color: var(--slate-400);
+    }
+
+    .dots {
+      display: flex;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--slate-700);
+    }
+
+    .dot.filled { background: var(--blue-500); }
+
+    /* ── Sidebar: Loisirs ── */
+    .hobby-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .hobby-tag {
+      padding: 0.2rem 0.65rem;
+      background: var(--slate-700);
+      color: var(--slate-300);
+      border-radius: 4px;
+      font-size: 0.82rem;
+    }
+
+    /* ── Fade-in animation ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      body { background: var(--white); }
+
+      .page {
+        grid-template-columns: 1fr;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .main { padding: 2rem 1.5rem; }
+
+      .sidebar {
+        padding: 2rem 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 2rem;
+      }
+
+      .sidebar .section-title {
+        grid-column: 1 / -1;
+      }
+
+      .sidebar .contact-list { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 600px) {
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 { font-size: 2rem; }
+
+      .entry-header,
+      .edu-header { flex-direction: column; }
+
+      .cert-item { flex-direction: column; gap: 0.15rem; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      html { font-size: 11.5px; }
+
+      body {
+        background: white;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .page {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        max-width: none;
+        min-height: 100vh;
+      }
+
+      .main { padding: 2rem 2rem 1.5rem; }
+      .sidebar { padding: 2rem 1.5rem 1.5rem; }
+
+      .timeline-entry,
+      .edu-entry {
+        break-inside: avoid;
+      }
+
+      .section-title {
+        break-after: avoid;
+      }
+
+      .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      a[href]::after {
+        content: ' (' attr(href) ')';
+        font-size: 0.7em;
+        color: #64748B;
+      }
+
+      .contact-item a[href]::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="main">
+      <header class="header fade-in">
+        <h1>Elias Cédric Laouiti</h1>
+        <p class="subtitle">Chef d'équipe technique &amp; Développeur Fullstack sénior</p>
+        <p class="summary">
+          Développeur fullstack devenu chef d'équipe technique, avec plus de 15 ans d'expérience dans le développement d'applications web et de systèmes back-end.
+          J'ai évolué chez AB Tasty sur des sujets allant de la maintenance de plateformes existantes à la création de nouveaux produits, jusqu'à l'intégration de solutions issues d'acquisitions.
+          J'ai également rejoint pendant plusieurs années l'équipe innovation, où j'ai travaillé sur des projets from scratch et changé régulièrement de langages et de technologies, développant une forte capacité d'adaptation.
+          Passionné par le code propre et maintenable, je veille à construire des solutions fiables et durables.
+        </p>
+      </header>
+
+
+      <h2 class="section-title fade-in">Expériences</h2>
+      <div class="timeline">
+        <article class="timeline-entry fade-in">
+          <div class="entry-header">
+            <span class="entry-title">Chef d'équipe technique &amp; Développeur sénior</span>
+            <span class="entry-date">05/2024 – Présent</span>
+          </div>
+          <div class="entry-company">AB Tasty</div>
+          <div class="entry-location">Montréal, Québec</div>
+          <ul class="entry-details">
+            <li>Management d'une équipe de développeurs front-end et back-end</li>
+            <li>Accompagnement et montée en compétence des développeurs</li>
+            <li>Pilotage technique et organisationnel de projets de fusion vers la plateforme principale AB Tasty, incluant l'intégration de solutions internes (Flagship) et de produits issus d'acquisitions (Potions)</li>
+            <li>Responsabilité de l'architecture, des choix techniques et de la qualité du code</li>
+            <li>Planification, priorisation, suivi de l'avancement et arbitrage technique</li>
+            <li>Collaboration avec l'architecte logiciel, le responsable produit et le designer</li>
+            <li>Contribution active au développement fullstack en parallèle du rôle de management</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="label">Back :</span>
+            <span class="pill">PHP 8.5</span>
+            <span class="pill">Symfony 6</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">Redis</span>
+            <span class="pill">Rector</span>
+            <span class="pill">PHPStan</span>
+            <span class="pill">PHPUnit</span>
+          </div>
+          <div class="tech-stack">
+            <span class="label">Front :</span>
+            <span class="pill">React</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">React Query</span>
+            <span class="pill">GraphQL</span>
+            <span class="pill">Styled Components</span>
+          </div>
+          <div class="tech-stack">
+            <span class="label">Infra :</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Event Bridge</span>
+            <span class="pill">Sentry</span>
+            <span class="pill">Grafana</span>
+          </div>
+        </article>
+        <article class="timeline-entry fade-in">
+          <div class="entry-header">
+            <span class="entry-title">Développeur Fullstack sénior</span>
+            <span class="entry-date">06/2020 – 05/2024</span>
+          </div>
+          <div class="entry-company">AB Tasty</div>
+          <div class="entry-location">Montréal, Québec | Paris, France</div>
+          <ul class="entry-details">
+            <li>Développeur principal sur l'API back-end Symfony du projet Flagship by AB Tasty</li>
+            <li>Contribution active au développement front-end au sein de l'équipe</li>
+            <li>Migration technique de Symfony 5 vers Symfony 6 et de PHP 7 vers PHP 8</li>
+            <li>Support du responsable d'équipe sur l'analyse de la faisabilité technique et l'estimation des tâches</li>
+            <li>Accompagnement et montée en compétence des développeurs juniors</li>
+            <li>Mise en place d'un système d'abonnement via Stripe</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="label">Back :</span>
+            <span class="pill">PHP 8</span>
+            <span class="pill">Symfony 6</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">Redis</span>
+            <span class="pill">PHPStan</span>
+            <span class="pill">PHPUnit</span>
+          </div>
+          <div class="tech-stack">
+            <span class="label">Front :</span>
+            <span class="pill">React</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">TanStack Query</span>
+            <span class="pill">GraphQL</span>
+            <span class="pill">Material UI</span>
+          </div>
+          <div class="tech-stack">
+            <span class="label">Infra :</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Sentry</span>
+            <span class="pill">Grafana</span>
+          </div>
+        </article>
+        <article class="timeline-entry fade-in">
+          <div class="entry-header">
+            <span class="entry-title">Développeur Fullstack</span>
+            <span class="entry-date">08/2013 – 06/2020</span>
+          </div>
+          <div class="entry-company">AB Tasty</div>
+          <div class="entry-location">Paris, France</div>
+          <ul class="entry-details">
+            <li>Participation à la croissance de la plateforme AB Tasty sur des stacks historiques et modernes (PHP 5/7, Symfony 4/5, jQuery, Angular, React)</li>
+            <li>Membre de l'équipe Innovation pendant 3 ans</li>
+            <li>Participation à la création de zéro du nouveau produit Flagship by AB Tasty</li>
+            <li>Travail sur des environnements techniques variés et multi-langages</li>
+            <li>Mentorat d'un alternant</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="label">Back :</span>
+            <span class="pill">PHP</span>
+            <span class="pill">Symfony</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">Python</span>
+          </div>
+          <div class="tech-stack">
+            <span class="label">Front :</span>
+            <span class="pill">jQuery</span>
+            <span class="pill">React</span>
+            <span class="pill">Material UI</span>
+          </div>
+          <div class="tech-stack">
+            <span class="label">Cloud :</span>
+            <span class="pill">Docker</span>
+            <span class="pill">GCP Cloud Run</span>
+            <span class="pill">BigQuery</span>
+            <span class="pill">PubSub</span>
+            <span class="pill">AWS Lambda</span>
+          </div>
+        </article>
+        <article class="timeline-entry fade-in">
+          <div class="entry-header">
+            <span class="entry-title">Développeur Fullstack</span>
+            <span class="entry-date">12/2011 – 08/2013</span>
+          </div>
+          <div class="entry-company">Igedoc / Locasystem Media</div>
+          <div class="entry-location">Drancy, France</div>
+          <ul class="entry-details">
+            <li>Développement de sites web et templates WordPress</li>
+            <li>Administration de serveurs sous Linux (Debian et Ubuntu)</li>
+            <li>Assistance aux utilisateurs, création de comptes dans l'Active Directory</li>
+            <li>Installation de périphériques informatiques en réseau</li>
+          </ul>
+        </article>
+        <article class="timeline-entry fade-in">
+          <div class="entry-header">
+            <span class="entry-title">Technicien en maintenance informatique</span>
+            <span class="entry-date">09/2010 – 08/2011</span>
+          </div>
+          <div class="entry-company">Accom-Europe</div>
+          <div class="entry-location">Aulnay, France</div>
+          <ul class="entry-details">
+            <li>Assistance aux utilisateurs et paramétrage de postes clients</li>
+            <li>Installation d'imprimantes réseau et câblage RJ45</li>
+            <li>Réparation de postes de travail</li>
+          </ul>
+        </article>
+      </div>
+      <h2 class="section-title fade-in">Études</h2>
+
+      <div class="edu-entry fade-in">
+        <div class="edu-header">
+          <span class="edu-title">Maîtrise — Architecte des systèmes d'informations</span>
+          <span class="edu-date">09/2016 – 08/2018</span>
+        </div>
+        <div class="edu-school">INSTA</div>
+        <div class="edu-field">Paris, France · Diplôme de niveau Bac +5</div>
+        <p class="edu-desc">Architecte Logiciel — conception et modélisation de systèmes d'information robustes et évolutifs. Développement d'architectures logicielles, technologies modernes, cloud et gestion de projets techniques.</p>
+        <span class="edu-mention">Mention : Bien</span>
+      </div>
+
+      <div class="edu-entry fade-in">
+        <div class="edu-header">
+          <span class="edu-title">Baccalauréat universitaire — Développement Web et mobile</span>
+          <span class="edu-date">09/2015 – 08/2016</span>
+        </div>
+        <div class="edu-school">Université de Cergy-Pontoise</div>
+        <div class="edu-field">Gennevilliers, France · Diplôme de niveau Bac +3</div>
+        <p class="edu-desc">Licence professionnelle — développement web fullstack et gestion de projets numériques. Spécialisation applications mobiles : iOS, Android, développement hybride.</p>
+        <span class="edu-mention">Mention : Bien</span>
+      </div>
+
+      <div class="edu-entry fade-in">
+        <div class="edu-header">
+          <span class="edu-title">DEC — Programmation / développement informatique</span>
+          <span class="edu-date">09/2013 – 08/2015</span>
+        </div>
+        <div class="edu-school">AFORP</div>
+        <div class="edu-field">Issy, France · Diplôme de niveau Bac +2</div>
+        <p class="edu-desc">Services Informatiques aux Organisations, option SLAM — développement d'applications et programmation pour les entreprises.</p>
+      </div>
+
+      <div class="edu-entry fade-in">
+        <div class="edu-header">
+          <span class="edu-title">DEC — Informatique et réseaux</span>
+          <span class="edu-date">09/2010 – 08/2013</span>
+        </div>
+        <div class="edu-school">AFORP</div>
+        <div class="edu-field">Issy, France · Diplôme de niveau Bac</div>
+        <p class="edu-desc">Systèmes Électroniques Numériques, option Télécommunications et Réseaux — installation, maintenance et gestion des réseaux et systèmes de communication.</p>
+      </div>
+      <h2 class="section-title fade-in">Certifications</h2>
+      <ul class="cert-list fade-in">
+        <li class="cert-item">
+          <span class="cert-name">Upgrading &amp; What's in Symfony 7</span>
+          <span class="cert-meta">SymfonyCasts · 02/2025</span>
+        </li>
+        <li class="cert-item">
+          <span class="cert-name">Go Pro with Doctrine Queries</span>
+          <span class="cert-meta">SymfonyCasts · 11/2024</span>
+        </li>
+        <li class="cert-item">
+          <span class="cert-name">Harmonious Development with Symfony 6</span>
+          <span class="cert-meta">SymfonyCasts · 06/2022</span>
+        </li>
+        <li class="cert-item">
+          <span class="cert-name">Anglais — 665/990</span>
+          <span class="cert-meta">TOEIC · 05/2015</span>
+        </li>
+      </ul>
+
+      <h2 class="section-title fade-in">Références</h2>
+      <p class="references-text fade-in">Références sur demande</p>
+
+    </main>
+
+    <aside class="sidebar">
+
+      <h2 class="section-title">Coordonnées</h2>
+      <ul class="contact-list">
+        <li class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://linkedin.com/in/laouitielias" target="_blank" rel="noopener">linkedin.com/in/laouitielias</a>
+        </li>
+        <li class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Montréal, QC</span>
+        </li>
+      </ul>
+
+      <h2 class="section-title">Compétences</h2>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Back-end</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">Symfony</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">PHPUnit</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Front-end</div>
+        <div class="skill-tags">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">React</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Autres environnements</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Go</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Agents IA</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Claude Code</span>
+          <span class="skill-tag">Junie</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Encadrement &amp; gestion</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Leadership technique</span>
+          <span class="skill-tag">Planification</span>
+          <span class="skill-tag">Suivi de projets</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">Langues</h2>
+
+      <div class="lang-item">
+        <div class="lang-name">Français</div>
+        <div class="lang-level">Natif</div>
+        <div class="dots">
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+        </div>
+      </div>
+
+      <div class="lang-item">
+        <div class="lang-name">Anglais</div>
+        <div class="lang-level">Autonomie professionnelle</div>
+        <div class="dots">
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <h2 class="section-title">Loisirs</h2>
+      <ul class="hobby-list">
+        <li class="hobby-tag">Photographie</li>
+        <li class="hobby-tag">Aviation</li>
+        <li class="hobby-tag">Pâtisserie</li>
+      </ul>
+
+    </aside>
+  </div>
+
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+      document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    } else {
+      document.querySelectorAll('.fade-in').forEach((el) => el.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
